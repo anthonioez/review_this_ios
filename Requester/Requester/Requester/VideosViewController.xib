@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="4608" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideosViewController">
+            <connections>
+                <outlet property="addBar" destination="5JY-nQ-7mj" id="2CI-PY-p5L"/>
+                <outlet property="infoLabel" destination="1KI-Gr-ffG" id="Daz-6t-koc"/>
+                <outlet property="navBar" destination="AC5-CX-8oc" id="n8M-6z-279"/>
+                <outlet property="navItem" destination="oz6-cg-6X4" id="lwn-rF-9QG"/>
+                <outlet property="videoTable" destination="2zo-gR-QCd" id="D6b-qi-E5Q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-CX-8oc">
+                    <rect key="frame" x="0.0" y="20" width="390" height="44"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <items>
+                        <navigationItem title="Topic List" id="oz6-cg-6X4">
+                            <barButtonItem key="rightBarButtonItem" image="bar_add.png" id="5JY-nQ-7mj" userLabel="addBar">
+                                <connections>
+                                    <action selector="onAdd:" destination="-1" id="eZC-w3-YYI"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="2zo-gR-QCd">
+                    <rect key="frame" x="0.0" y="64" width="390" height="780"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="1KI-Gr-ffG" userLabel="infoLabel">
+                    <rect key="frame" x="55" y="392" width="280" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="FdH-bx-Kex"/>
+                        <constraint firstAttribute="height" constant="60" id="Lot-j1-7sc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" systemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2zo-gR-QCd" secondAttribute="trailing" id="IB4-lD-fMi"/>
+                <constraint firstAttribute="centerX" secondItem="1KI-Gr-ffG" secondAttribute="centerX" id="Ofo-uc-lJD"/>
+                <constraint firstAttribute="bottom" secondItem="2zo-gR-QCd" secondAttribute="bottom" id="VCz-VS-zQT"/>
+                <constraint firstItem="2zo-gR-QCd" firstAttribute="top" secondItem="AC5-CX-8oc" secondAttribute="bottom" id="YGj-5I-rnt"/>
+                <constraint firstItem="AC5-CX-8oc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="kc9-Rd-Sxr"/>
+                <constraint firstAttribute="trailing" secondItem="AC5-CX-8oc" secondAttribute="trailing" id="m9j-WQ-SyA"/>
+                <constraint firstAttribute="centerY" secondItem="1KI-Gr-ffG" secondAttribute="centerY" id="rq6-Ul-PDP"/>
+                <constraint firstItem="2zo-gR-QCd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="v5C-LA-Wa1"/>
+                <constraint firstItem="AC5-CX-8oc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yR7-us-SHw"/>
+            </constraints>
+            <point key="canvasLocation" x="-16" y="-17"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bar_add.png" width="32" height="32"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
